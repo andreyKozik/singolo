@@ -1,0 +1,213 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Lato-Semibold";
+  src: url(assets/fonts/Lato-Semibold.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato-Light";
+  src: url(assets/fonts/Lato-Light.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato-Regular";
+  src: url(assets/fonts/Lato-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato-Black";
+  src: url(assets/fonts/Lato-Black.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.header_background-color {
+  width: 100%;
+  height: 95px;
+  background-color: #2d303a;
+  box-shadow: inset 0px -6px #323746; }
+  .header_background-color header {
+    display: flex;
+    align-content: center;
+    width: 1020px;
+    height: 89px;
+    margin: 0 auto; }
+    .header_background-color header h1 {
+      display: flex;
+      align-items: center;
+      margin: -3px 0 0 40px;
+      color: white;
+      font-weight: 500;
+      font-size: 1.65rem;
+      letter-spacing: -0.089rem;
+      font-family: "Lato-Semibold", Arial, Helvetica, sans-serif; }
+      .header_background-color header h1 span {
+        font-family: "Lato-Light";
+        margin: 3px 0 0 -1px;
+        color: #f06c64;
+        font-size: 1.7825rem; }
+    .header_background-color header .navigation {
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+      width: 371px;
+      color: white;
+      font-size: 0.715rem;
+      margin: 43px 0 0 452px;
+      letter-spacing: 0.012rem;
+      font-family: "Lato-Semibold", Arial, Helvetica, sans-serif;
+      list-style-type: none; }
+      .header_background-color header .navigation li:not(:nth-child(1))::before {
+        position: absolute;
+        opacity: 0.15;
+        content: "·";
+        margin: -1px -16px; }
+      .header_background-color header .navigation li:hover {
+        color: #f06c64;
+        cursor: pointer; }
+
+main {
+  margin: 0 auto; }
+  main .contact-form_background-color {
+    width: 100%;
+    height: 654.5px;
+    background-color: #f06c64;
+    box-shadow: inset 0px -6px #ea676b; }
+    main .contact-form_background-color .contact-form {
+      width: 1020px;
+      height: 648px;
+      margin: 0 auto; }
+      main .contact-form_background-color .contact-form h2 {
+        font-size: 1.875rem;
+        color: #f0d8d9;
+        padding: 59px 0 33px 40px;
+        letter-spacing: -0.01rem;
+        font-family: "Lato-Black", Arial, Helvetica, sans-serif;
+        font-weight: 700; }
+      main .contact-form_background-color .contact-form p {
+        width: 940px;
+        font-size: 1.125rem;
+        color: #f0d8d9;
+        line-height: 30px;
+        font-family: "Lato-Light";
+        margin: -15px 0 23px 40px;
+        letter-spacing: -0.02rem;
+        word-spacing: 0.13rem;
+        text-align: justify; }
+      main .contact-form_background-color .contact-form .contact-form-and-information {
+        display: flex;
+        justify-content: space-around; }
+        main .contact-form_background-color .contact-form .contact-form-and-information .forms {
+          width: 625px;
+          height: 365px;
+          margin: 22px 0 0 22px; }
+          main .contact-form_background-color .contact-form .contact-form-and-information .forms input {
+            width: 619px;
+            height: 38px;
+            border-radius: 5px;
+            border: 0px solid #d6564f;
+            background-color: #d6564f;
+            outline: none;
+            margin-bottom: 16px; }
+          main .contact-form_background-color .contact-form .contact-form-and-information .forms input:invalid {
+            background-color: #d6564f;
+            color: #9e0015; }
+          main .contact-form_background-color .contact-form .contact-form-and-information .forms input:valid {
+            background-color: #ddffe4; }
+          main .contact-form_background-color .contact-form .contact-form-and-information .forms input::placeholder {
+            color: #f48c8f;
+            font-size: 0.75rem;
+            padding-left: 15px;
+            word-spacing: 0.15rem;
+            font-family: "Lato-Light"; }
+          main .contact-form_background-color .contact-form .contact-form-and-information .forms textarea {
+            width: 619px;
+            height: 202px;
+            border-radius: 5px;
+            border: 0px solid #d6564f;
+            background-color: #d6564f;
+            outline: none;
+            margin-bottom: 16px;
+            resize: none; }
+          main .contact-form_background-color .contact-form .contact-form-and-information .forms textarea::placeholder {
+            color: #f48c8f;
+            font-size: 0.75rem;
+            padding-left: 15px;
+            padding-top: 10px;
+            font-family: "Lato-Light"; }
+          main .contact-form_background-color .contact-form .contact-form-and-information .forms textarea:valid {
+            background-color: #ddffe4; }
+          main .contact-form_background-color .contact-form .contact-form-and-information .forms .submit-button {
+            width: 150px;
+            height: 35px;
+            background: linear-gradient(to top, #af403b, #f5756f);
+            border: 1px solid #b34843;
+            border-radius: 5px;
+            cursor: pointer; }
+        main .contact-form_background-color .contact-form .contact-form-and-information .contact-information {
+          width: 300px; }
+          main .contact-form_background-color .contact-form .contact-form-and-information .contact-information h3 {
+            font-size: 1.125rem;
+            color: #f0d8d9;
+            font-family: "Lato-Black", Arial, Helvetica, sans-serif;
+            margin: 20px 0 23px -22px;
+            letter-spacing: -0.005rem; }
+          main .contact-form_background-color .contact-form .contact-form-and-information .contact-information p {
+            width: 300px;
+            font-size: 0.75rem;
+            color: #f0d8d9;
+            line-height: 22px;
+            font-family: "Lato-Light";
+            margin: -15px 0 23px -22px;
+            letter-spacing: -0.02rem;
+            word-spacing: 0.13rem;
+            text-align: justify; }
+          main .contact-form_background-color .contact-form .contact-form-and-information .contact-information .location {
+            width: 150px;
+            display: flex;
+            margin: 0px 0 0px -19px;
+            text-decoration: none; }
+            main .contact-form_background-color .contact-form .contact-form-and-information .contact-information .location p {
+              margin: -2px 0 0px 13px; }
+          main .contact-form_background-color .contact-form .contact-form-and-information .contact-information .phone {
+            display: flex;
+            margin: 0px 0 0px -21px;
+            text-decoration: none; }
+            main .contact-form_background-color .contact-form .contact-form-and-information .contact-information .phone a {
+              display: block; }
+            main .contact-form_background-color .contact-form .contact-form-and-information .contact-information .phone p {
+              margin: 0px 0 0px 11px; }
+          main .contact-form_background-color .contact-form .contact-form-and-information .contact-information .mail {
+            display: flex;
+            justify-content: space-around;
+            margin: 1px 0 0px -21px;
+            text-decoration: none; }
+            main .contact-form_background-color .contact-form .contact-form-and-information .contact-information .mail p {
+              margin: 0px 0 0px 11px; }
+
+.footer_background-color {
+  width: 100%;
+  height: 76px;
+  background-color: #2d303a; }
+  .footer_background-color footer {
+    display: flex;
+    width: 1020px;
+    margin: 0 auto; }
+    .footer_background-color footer h6 {
+      font-size: 0.75rem;
+      color: #666d89;
+      font-family: "Lato-Light", Arial, Helvetica, sans-serif;
+      margin: 30px 0 23px 42px;
+      letter-spacing: -0.015rem; }
+    .footer_background-color footer .social-networks_footer {
+      width: 160px;
+      display: flex;
+      justify-content: space-around;
+      margin: 22px 0 0 600px; }
+

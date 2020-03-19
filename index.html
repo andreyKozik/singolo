@@ -6,46 +6,52 @@
     <title>Singolo</title>
   <link href="style.css" rel="stylesheet"></head>
   <body>
+    <!-- <div id="services" style="top: 600px; position: absolute;"></div>
+    <div id="portfolio" style="top: 1100px; position: absolute;"></div>
+    <div id="about-us" style="top: 1975px; position: absolute;"></div>
+    <div id="contact-form" style="top: 2703px; position: absolute;"></div> -->
     <section class="header_background-color">
       <header>
         <h1>SINGOLO <span>*</span></h1>
         <nav class="header-navigation">
           <ul class="navigation">
-            <li>HOME</li>
-            <li>SERVICES</li>
-            <li>PORTFOLIO</li>
-            <li>ABOUT</li>
-            <li>CONTACT</li>
+            <li><a class="home active" href="#home">HOME</a></li>
+            <li><a class="services" href="#services">SERVICES</a></li>
+            <li><a class="portfolio" href="#portfolio">PORTFOLIO</a></li>
+            <li><a class="about-us" href="#about-us">ABOUT</a></li>
+            <li><a class="contact-form" href="#contact-form">CONTACT</a></li>
           </ul>
         </nav>
       </header>
     </section>
     <main>
-      <section class="slider_background-color">
+      <section class="slider_background-color" id="home">
         <div class="slider">
-          <img
-            class="slider_left-array"
-            src="./assets/img/sliderLeftArray.svg"
-            alt="slider-left-array"
-          />
-          <img
-            class="phone-vertical"
-            src="./assets/img/iphoneVertical.png"
-            alt="phone-vertical"
-          />
-          <img
-            class="phone-horizontal"
-            src="./assets/img/iphoneHorizontal.png"
-            alt="phone-horizontal"
-          />
-          <img
-            class="slider_right-array"
-            src="./assets/img/sliderRightArray.svg"
-            alt="slider-right-array"
-          />
+          <img class="slider_left-array left control" src="./assets/img/sliderLeftArray.svg" alt="slider-left-array" />
+          <div class="slide-1 item active">
+            <div class="phone-vertical">
+              <img src="./assets/img/iphoneVertical.png" alt="phone-vertical" />
+              <div class="vertical-black-screen"></div>
+              <div class="home-phone-vertical"><img src="./assets/img/Home.png" alt="home" /></div>
+            </div>
+            <div class="phone-horizontal">
+              <img src="./assets/img/iphoneHorizontal.png" alt="phone-horizontal" />
+              <div class="horizontal-black-screen"></div>
+              <div class="home-phone-horizontal"><img src="./assets/img/Home.png" alt="home" /></div>
+            </div>
+          </div>
+          <div class="slide-2 item ">
+            <img src="./assets/img/slide2img1.png" alt="phones" />
+            <div class="phone-vertical-slide2">
+              <img src="./assets/img/slide2img2.png" alt="phone-vertical-slide2" />
+              <div class="vertical-black-screen-slide2"></div>
+              <div class="home-vertical-slide2"><img src="./assets/img/Home.png" alt="home" /></div>
+            </div>
+          </div>
+          <img class="slider_right-array right control" src="./assets/img/sliderRightArray.svg" alt="slider-right-array" />
         </div>
       </section>
-      <section class="services_background-color">
+      <section class="services_background-color" id="services">
         <div class="services">
           <div class="services_description">
             <h2>Our Services</h2>
@@ -143,36 +149,38 @@
           </div>
         </div>
       </section>
-      <section class="portfolio_background-color">
+      <section class="portfolio_background-color" id="portfolio">
         <div class="portfolio">
           <h2>Portfolio</h2>
           <p>
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
             eget lacinia odio sem nec elit.
           </p>
-          <nav>
-            <button class="all">All</button>
+          <nav class="tabs">
+            <button class="all button-active">All</button>
             <button class="web-design">Web Design</button>
             <button class="graphic-design">Graphic Design</button>
             <button class="artwork">Artwork</button>
           </nav>
           <div class="work-examples">
-            <img src="./assets/img/portfolio1.png" alt="portfolio1" />
-            <img src="./assets/img/portfolio2.png" alt="portfolio2" />
-            <img src="./assets/img/portfolio3.png" alt="portfolio3" />
-            <img src="./assets/img/portfolio4.png" alt="portfolio4" />
-            <img src="./assets/img/portfolio5.png" alt="portfolio5" />
-            <img src="./assets/img/portfolio6.png" alt="portfolio6" />
-            <img src="./assets/img/portfolio7.png" alt="portfolio7" />
-            <img src="./assets/img/portfolio8.png" alt="portfolio8" />
-            <img src="./assets/img/portfolio9.png" alt="portfolio9" />
-            <img src="./assets/img/portfolio10.png" alt="portfolio10" />
-            <img src="./assets/img/portfolio11.png" alt="portfolio11" />
-            <img src="./assets/img/portfolio12.png" alt="portfolio12" />
+            <ul>
+              <li><img src="./assets/img/portfolio1.png" alt="portfolio1" /></li>
+              <li><img src="./assets/img/portfolio2.png" alt="portfolio2" /></li>
+              <li><img src="./assets/img/portfolio3.png" alt="portfolio3" /></li>
+              <li><img src="./assets/img/portfolio4.png" alt="portfolio4" /></li>
+              <li><img src="./assets/img/portfolio5.png" alt="portfolio5" /></li>
+              <li><img src="./assets/img/portfolio6.png" alt="portfolio6" /></li>
+              <li><img src="./assets/img/portfolio7.png" alt="portfolio7" /></li>
+              <li><img src="./assets/img/portfolio8.png" alt="portfolio8" /></li>
+              <li><img src="./assets/img/portfolio9.png" alt="portfolio9" /></li>
+              <li><img src="./assets/img/portfolio10.png" alt="portfolio10" /></li>
+              <li><img src="./assets/img/portfolio11.png" alt="portfolio11" /></li>
+              <li><img src="./assets/img/portfolio12.png" alt="portfolio12" /></li>
+            </ul>
           </div>
         </div>
       </section>
-      <section class="about-us_background-color">
+      <section class="about-us_background-color" id="about-us">
         <div class="about-us">
           <h2>About Us</h2>
           <p class="about-us_description">
@@ -251,7 +259,7 @@
           </div>
         </div>
       </section>
-      <section class="contact-form_background-color">
+      <section class="contact-form_background-color" id="contact-form">
         <div class="contact-form">
           <h2>Get a Quote</h2>
           <p>
@@ -261,31 +269,34 @@
             tortor mauris condimentum nibh.
           </p>
           <div class="contact-form-and-information">
-            <form action="#" class="forms" id="data">
+            <form action="#" class="forms" id="data" onsubmit="return false">
               <input
-                type="text"
+                id="name"
+                
                 name="name"
                 placeholder="Name (Required)"
+                pattern="^\S[А-Яа-яЁёA-Za-z0-9_\s]+$"
                 required
               />
               <input
+                id="email"
                 type="email"
                 name="email"
                 placeholder="Email (Required)"
                 required
               />
               <input
+                id="subject"
                 type="text"
                 name="question"
                 placeholder="Subject"
-                required
               />
               <textarea
+                id="describe"
                 cols="20"
                 placeholder="Describe your project in detail..."
-                required
               ></textarea>
-              <button type="submit" form="data" class="submit-button">Submit</button>
+              <button type="submit" form="data" class="submit-button" >Submit</button>
             </form>
             <div class="contact-information">
               <h3>Contact Information</h3>
@@ -310,6 +321,12 @@
             </div>
           </div>
         </div>
+        <div id="emailSent" class="none">
+          <h4>The letter was sent</h4>
+          <h6 class="subjectSent">Without subject</h6>
+          <p class="descriptionSent"> </p>
+          <button class="confirm" type="submit">Ok</button>
+        </div>
       </section>
     </main>
     <section class="footer_background-color">
@@ -323,5 +340,5 @@
         </div>
       </footer>
     </section>
-  <script type="text/javascript" src="main.js"></script></body>
+  <script type="text/javascript" src="script.js"></script></body>
 </html>

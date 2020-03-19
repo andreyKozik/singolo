@@ -45,13 +45,26 @@ main .about-us_background-color .about-us .our-team .developer1, main .about-us_
     width: 160px;
     display: flex;
     justify-content: space-around;
-    margin: 0px 0 0 -3px; }
+    margin: 0px 0 0 -3px;
+    user-select: none; }
+  main .about-us_background-color .about-us .our-team .developer1 .social-networks a img, main .about-us_background-color .about-us .our-team .developer2 .social-networks a img, main .about-us_background-color .about-us .our-team .developer3 .social-networks a img {
+    margin-right: 4px;
+    margin-left: 4px; }
+  main .about-us_background-color .about-us .our-team .developer1 .social-networks a img:hover, main .about-us_background-color .about-us .our-team .developer2 .social-networks a img:hover, main .about-us_background-color .about-us .our-team .developer3 .social-networks a img:hover {
+    width: 34px;
+    height: 34px;
+    background-color: #ffffff;
+    border-radius: 19px; }
 
 * {
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0; }
 
 .header_background-color {
+  position: sticky;
+  top: 0;
+  z-index: 3;
   width: 100%;
   height: 95px;
   background-color: #2d303a;
@@ -59,9 +72,11 @@ main .about-us_background-color .about-us .our-team .developer1, main .about-us_
   .header_background-color header {
     display: flex;
     align-content: center;
-    width: 1020px;
+    justify-content: space-between;
+    max-width: 1020px;
     height: 89px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    user-select: none; }
     .header_background-color header h1 {
       display: flex;
       align-items: center;
@@ -83,7 +98,7 @@ main .about-us_background-color .about-us .our-team .developer1, main .about-us_
       width: 371px;
       color: white;
       font-size: 0.715rem;
-      margin: 43px 0 0 452px;
+      margin: 43px 40px 0 0px;
       letter-spacing: 0.012rem;
       font-family: "Lato-Semibold", Arial, Helvetica, sans-serif;
       list-style-type: none; }
@@ -92,42 +107,162 @@ main .about-us_background-color .about-us .our-team .developer1, main .about-us_
         opacity: 0.15;
         content: "·";
         margin: -1px -16px; }
-      .header_background-color header .navigation li:hover {
-        color: #f06c64;
-        cursor: pointer; }
+      @media (hover) {
+        .header_background-color header .navigation li a:hover {
+          color: #b38aff;
+          cursor: pointer; } }
+      .header_background-color header .navigation li a.active {
+        color: #f06c64; }
+      .header_background-color header .navigation a:visited,
+      .header_background-color header .navigation a:link {
+        text-decoration: none;
+        color: #f2f2f2; }
 
 main {
   margin: 0 auto; }
   main .slider_background-color {
+    scroll-margin-top: 95px;
+    top: -95px;
     width: 100%;
     height: 600px;
     background-color: #f06c64;
-    box-shadow: inset 0px -6px #ea676b; }
+    box-shadow: inset 0px -6px #ea676b;
+    transition: all ease 1s; }
     main .slider_background-color .slider {
-      width: 1020px;
-      height: 594px;
-      margin: 0 auto; }
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 1020px;
+      height: 589px;
+      margin: 0 auto;
+      transition: all ease 1s;
+      user-select: none; }
+      main .slider_background-color .slider .item {
+        display: none;
+        align-items: center;
+        align-content: center;
+        overflow: hidden;
+        animation: 0.7s ease-in-out; }
+      main .slider_background-color .slider .slide-1 {
+        justify-content: space-between;
+        width: 1020px;
+        height: 588px; }
+        main .slider_background-color .slider .slide-1 .phone-vertical {
+          margin: 0px 1px 0px 112px;
+          width: 240px;
+          height: 484px; }
+        main .slider_background-color .slider .slide-1 .phone-horizontal {
+          margin: 0px 110px 0px 0px;
+          display: flex;
+          width: 484px;
+          height: 240px;
+          align-items: center; }
+        main .slider_background-color .slider .slide-1 .vertical-black-screen {
+          opacity: 0;
+          width: 189px;
+          height: 334px;
+          background-color: black;
+          position: absolute;
+          margin: -423px 1px 0px 13px;
+          transition: all ease 1s; }
+        main .slider_background-color .slider .slide-1 .horizontal-black-screen {
+          opacity: 0;
+          width: 334px;
+          height: 189px;
+          background-color: black;
+          position: absolute;
+          margin: -12px 1px 0px 60px;
+          transition: all ease 1s; }
+        main .slider_background-color .slider .slide-1 .home-phone-horizontal {
+          position: absolute;
+          margin: -10px 0px 0px 9px;
+          cursor: pointer; }
+        main .slider_background-color .slider .slide-1 .home-phone-vertical {
+          position: absolute;
+          margin: -80px 0px 0px 86px;
+          cursor: pointer; }
+        main .slider_background-color .slider .slide-1 .button-home {
+          margin: 1px 0px 0px 1px; }
+      main .slider_background-color .slider .slide-2 {
+        justify-content: center;
+        width: 1020px;
+        height: 588px; }
+        main .slider_background-color .slider .slide-2 .vertical-black-screen-slide2 {
+          opacity: 0;
+          width: 201px;
+          height: 355px;
+          background-color: black;
+          position: absolute;
+          margin: -449px 1px 0px 14px;
+          transition: all ease 1s; }
+        main .slider_background-color .slider .slide-2 .phone-vertical-slide2 {
+          position: absolute;
+          align-items: center;
+          align-content: center; }
+        main .slider_background-color .slider .slide-2 .home-vertical-slide2 {
+          position: absolute;
+          margin: -83px 0px 0px 94px;
+          cursor: pointer; }
       main .slider_background-color .slider .slider_left-array {
+        opacity: 0.6;
         position: absolute;
-        margin: 281px 0 0 42px;
+        margin-left: -460px;
         cursor: pointer; }
-      main .slider_background-color .slider .phone-vertical {
-        display: inline-block;
-        margin: 53px 73px 0 112px; }
-      main .slider_background-color .slider .phone-horizontal {
-        display: inline-block;
-        margin: 0 0 122px -4px; }
+      main .slider_background-color .slider .slider_left-array:hover {
+        opacity: 1; }
       main .slider_background-color .slider .slider_right-array {
+        opacity: 0.6;
         position: absolute;
-        margin: 281px 0 0 55px;
+        margin-left: 460px;
         cursor: pointer; }
+      main .slider_background-color .slider .slider_right-array:hover {
+        opacity: 1; }
+      main .slider_background-color .slider .control {
+        cursor: pointer; }
+      main .slider_background-color .slider .turn-off {
+        display: none;
+        transition: all ease 5s; }
+      main .slider_background-color .slider .active,
+      main .slider_background-color .slider .next {
+        display: flex;
+        transition: all ease 5s; }
+      main .slider_background-color .slider .next {
+        position: absolute;
+        z-index: 0; }
+      main .slider_background-color .slider .to-left {
+        position: absolute;
+        animation-name: left; }
+      main .slider_background-color .slider .from-right {
+        animation-name: right; }
+      main .slider_background-color .slider .to-right {
+        position: absolute;
+        animation-name: right;
+        animation-direction: reverse; }
+      main .slider_background-color .slider .from-left {
+        animation-name: left;
+        animation-direction: reverse; }
+
+@keyframes left {
+  from {
+    left: 0%; }
+  to {
+    left: -150%; } }
+
+@keyframes right {
+  from {
+    left: 150%; }
+  to {
+    left: 0%; } }
   main .services_background-color {
+    scroll-margin-top: 95px;
+    top: -95px;
     width: 100%;
     height: 500px;
     box-shadow: inset 0px -6px #ffffff;
     background-color: #f2f2f2; }
     main .services_background-color .services {
-      width: 1020px;
+      max-width: 1020px;
       height: 495px;
       margin: 0 auto; }
       main .services_background-color .services .services_description {
@@ -183,12 +318,13 @@ main {
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical; }
   main .portfolio_background-color {
+    scroll-margin-top: 95px;
     width: 100%;
     height: 869px;
     background-color: #2d303a;
     box-shadow: inset 0px -6px #323746; }
     main .portfolio_background-color .portfolio {
-      width: 1020px;
+      max-width: 1020px;
       height: 863px;
       margin: 0 auto; }
       main .portfolio_background-color .portfolio h2 {
@@ -199,7 +335,7 @@ main {
         font-family: "Lato-Black", Arial, Helvetica, sans-serif;
         font-weight: 700; }
       main .portfolio_background-color .portfolio p {
-        width: 940px;
+        max-width: 940px;
         font-size: 1.125rem;
         color: #767e9e;
         font-family: "Lato-Light";
@@ -210,7 +346,9 @@ main {
         display: flex;
         justify-content: space-around;
         width: 297px;
-        margin: -8px 0 0 36px; }
+        margin: -8px 0 0 36px;
+        user-select: none;
+        pointer-events: none; }
         main .portfolio_background-color .portfolio nav button {
           font-size: 0.75rem;
           color: #767e9e;
@@ -218,8 +356,13 @@ main {
           background: rgba(0, 0, 0, 0);
           border: 1px solid #666d89;
           outline: none;
-          border-radius: 5px; }
+          border-radius: 5px;
+          pointer-events: auto; }
         main .portfolio_background-color .portfolio nav button:hover {
+          color: #f2f2f2;
+          border-color: #f2f2f2;
+          cursor: pointer; }
+        main .portfolio_background-color .portfolio nav .button-active {
           color: #f2f2f2;
           border-color: #f2f2f2;
           cursor: pointer; }
@@ -237,23 +380,40 @@ main {
           width: 57px;
           height: 22px; }
       main .portfolio_background-color .portfolio .work-examples {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        margin: 19px 0 0px 30px;
-        width: 960px;
+        margin: 9px 30px 0px 30px;
+        max-width: 960px;
         height: 620px;
         overflow: hidden;
-        white-space: nowrap; }
+        white-space: nowrap;
+        user-select: none; }
+        main .portfolio_background-color .portfolio .work-examples ul {
+          display: flex;
+          flex-wrap: wrap; }
+        main .portfolio_background-color .portfolio .work-examples li {
+          list-style: none;
+          margin: 10px;
+          flex: 1 0 20%;
+          pointer-events: auto; }
+          @media (max-width: 768px) {
+            main .portfolio_background-color .portfolio .work-examples li {
+              flex: 1 0 25%; } }
+          @media (max-width: 375px) {
+            main .portfolio_background-color .portfolio .work-examples li {
+              flex: 1 0 35%; } }
         main .portfolio_background-color .portfolio .work-examples img {
-          margin-bottom: 20px; }
+          width: 100%;
+          height: 100%;
+          margin-bottom: -4px;
+          pointer-events: auto;
+          cursor: pointer; }
   main .about-us_background-color {
+    scroll-margin-top: 95px;
     width: 100%;
     height: 733.5px;
     box-shadow: inset 0px -6px #ffffff;
     background-color: #f2f2f2; }
     main .about-us_background-color .about-us {
-      width: 1020px;
+      max-width: 1020px;
       height: 728px;
       margin: 0 auto; }
       main .about-us_background-color .about-us h2 {
@@ -276,13 +436,15 @@ main {
       main .about-us_background-color .about-us .our-team {
         display: flex;
         justify-content: space-around;
-        width: 960px;
+        max-width: 960px;
         margin: 45px 0 0 30px; }
         main .about-us_background-color .about-us .our-team .developer2 {
           margin: 0px 1px 0 0px; }
         main .about-us_background-color .about-us .our-team .developer3 .social-networks {
           margin: 0 0 0 -4px; }
   main .contact-form_background-color {
+    scroll-margin-top: 95px;
+    position: relative;
     width: 100%;
     height: 654.5px;
     background-color: #f06c64;
@@ -323,10 +485,10 @@ main {
             background-color: #d6564f;
             outline: none;
             margin-bottom: 16px; }
-          main .contact-form_background-color .contact-form .contact-form-and-information .forms input:invalid {
+          main .contact-form_background-color .contact-form .contact-form-and-information .forms input:nth-child(-n + 2):required:invalid {
             background-color: #d6564f;
             color: #9e0015; }
-          main .contact-form_background-color .contact-form .contact-form-and-information .forms input:valid {
+          main .contact-form_background-color .contact-form .contact-form-and-information .forms input:nth-child(-n + 2):required:valid {
             background-color: #ddffe4; }
           main .contact-form_background-color .contact-form .contact-form-and-information .forms input::placeholder {
             color: #f48c8f;
@@ -349,15 +511,18 @@ main {
             padding-left: 15px;
             padding-top: 10px;
             font-family: "Lato-Light"; }
-          main .contact-form_background-color .contact-form .contact-form-and-information .forms textarea:valid {
-            background-color: #ddffe4; }
           main .contact-form_background-color .contact-form .contact-form-and-information .forms .submit-button {
             width: 150px;
             height: 35px;
+            color: #f2f2f2;
             background: linear-gradient(to top, #af403b, #f5756f);
             border: 1px solid #b34843;
-            border-radius: 5px;
-            cursor: pointer; }
+            border-radius: 6px;
+            cursor: pointer;
+            user-select: none;
+            outline: none; }
+          main .contact-form_background-color .contact-form .contact-form-and-information .forms .submit-button:hover {
+            border: 1px solid #fffbfbc4; }
         main .contact-form_background-color .contact-form .contact-form-and-information .contact-information {
           width: 300px; }
           main .contact-form_background-color .contact-form .contact-form-and-information .contact-information h3 {
@@ -398,6 +563,58 @@ main {
             text-decoration: none; }
             main .contact-form_background-color .contact-form .contact-form-and-information .contact-information .mail p {
               margin: 0px 0 0px 11px; }
+    main .contact-form_background-color .flex {
+      position: absolute;
+      z-index: 100;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      margin: 0 auto;
+      width: 350px;
+      background-color: #40434ed8;
+      border-radius: 15px;
+      z-index: 100;
+      padding-left: 10px;
+      padding-right: 10px; }
+      main .contact-form_background-color .flex h4 {
+        width: 150px;
+        margin: 0 auto;
+        font-family: "Lato-Black", Arial, Helvetica, sans-serif;
+        color: #ffffff;
+        margin-top: 10px; }
+      main .contact-form_background-color .flex .subjectSent {
+        width: 350px;
+        word-wrap: break-word;
+        text-align: justify;
+        font-family: "Lato-Black", Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        margin-top: 15px;
+        color: #c0c0c0; }
+      main .contact-form_background-color .flex .descriptionSent {
+        width: 350px;
+        max-height: 165px;
+        text-align: justify;
+        font-family: "Lato-Regular", Arial, Helvetica, sans-serif;
+        margin-top: 5px;
+        color: #e4e4e4;
+        overflow-y: auto;
+        word-wrap: break-word; }
+      main .contact-form_background-color .flex button {
+        display: flex;
+        justify-content: center;
+        width: 65px;
+        height: 25px;
+        margin: 15px auto 5px auto;
+        background: linear-gradient(to top, #a33d32, #fa9995);
+        border: 1px solid #443b3a;
+        border-radius: 5px;
+        cursor: pointer;
+        user-select: none;
+        outline: none;
+        pointer-events: auto; }
+      main .contact-form_background-color .flex button:hover {
+        border: 1px solid #fffbfbb0; }
 
 .footer_background-color {
   width: 100%;
@@ -414,8 +631,23 @@ main {
       margin: 30px 0 23px 42px;
       letter-spacing: -0.015rem; }
     .footer_background-color footer .social-networks_footer {
+      user-select: none;
       width: 160px;
       display: flex;
       justify-content: space-around;
       margin: 22px 0 0 600px; }
+    .footer_background-color footer .social-networks_footer a img {
+      opacity: 0.6; }
+    .footer_background-color footer .social-networks_footer a img:hover {
+      opacity: 1; }
+
+.border {
+  outline: #F06C64 solid 5px; }
+
+.none {
+  display: none;
+  transition: all ease 5s; }
+
+.stopScroll {
+  overflow: hidden; }
 
